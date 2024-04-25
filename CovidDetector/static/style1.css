@@ -1,0 +1,22 @@
+.records{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.table{
+    border-spacing: 0;
+    margin: 1rem;
+}
+
+.table__row:nth-child(even){
+    background-color:rgb(220, 218, 226);
+}
+.table__header{
+    color: blanchedalmond;
+    background-color: rgb(6, 1, 29);
+    text-align: left;
+}
+
+.table__cell{
+    padding: 8px;
+}

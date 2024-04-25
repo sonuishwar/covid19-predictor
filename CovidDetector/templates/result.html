@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <title>COVID Detector</title>
+  <link rel="shortcut icon" href="{{url_for('static',filename='image/coronavirus.png')}}">
+
+<body>
+  <h1 class="px-2"style="margin-left: 110px;">COVID-19<image style="margin-left: 3px;" src="{{url_for('static',filename='image/virus1.png')}}"
+      width="50" height="50"></image>
+  </h1>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+
+  <!-- Image and text -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+
+      <a class="navbar-brand" href="/detector" style="display: flex;flex-wrap: wrap;margin-left: 110px;">
+
+        Probability Detector
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div>
+        <ul class="navbar-nav me-auto mb-6 mb-lg-0">
+  
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('about')}}">About</a>
+          </li>
+        <a href="/">
+          <button style="margin-right: 125px;" class="btn btn-success">Home</button>
+        </a>
+  
+      </div>
+  </nav>
+  <div class="container mt-4">
+    <p>
+      <b>{{name}}'s</b> chances of having infection is <b>{{inf}}%</b>
+    </p>
+    <a href="/detector">
+      <button class="btn btn-success">Go back</button>
+    </a>
+  </div>
+  <hr>
+  <table>
+    <tr>
+      <td>
+        <h2 style="margin-left: 50px;">Preventive measures</h2>
+        <div style="margin-left: 50px;font-family: 'Courier New', monospace;">
+          <b>
+
+            <p>To prevent the spread of COVID-19:</p>
+            <ul>
+              <li>Get vaccinated as soon as possible.</li>
+              <li>Clean your hands often. Use soap and water, or an alcohol-based hand rub.</li>
+              <li>Maintain a safe distance from anyone who is coughing or sneezing.</li>
+              <li>Wear a mask when physical distancing is not possible.</li>
+              <li>Don’t touch your eyes, nose or mouth.</li>
+              <li>Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze.</li>
+              <li>Stay home if you feel unwell.</li>
+              <li>If you have a fever, cough and difficulty breathing, seek medical attention.</li>
+            </ul>
+            <div>
+              Calling in advance allows your healthcare provider to quickly direct you to the right health facility.<br>
+              This protects you, and prevents the spread of viruses and other infections.
+            </div>
+            <br>
+            <div>
+              Wearing masks can help prevent the spread of the virus from the person wearing the mask to others.
+              <br>Masks alone do not protect against COVID-19, and should be combined with physical distancing and hand
+              hygiene.
+              <br>Follow the advice provided by your local health authority.
+            </div>
+          </b>
+        </div>
+      </td>
+      <td>
+        <h5>Watch this short video to know how to <br>prevent yourself from COVID-19:</h5>
+        <iframe style="margin-right: 5px;" width="426" height="240" src="https://www.youtube.com/embed/7tgm8KBlCtE"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </td>
+    </tr>
+  </table>
+  <footer>
+    <hr />
+    <div class="copyright mb-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <span>Copyright © 2021, All Rights Reserved</span>
+                </div>
+                <!-- End Col -->
+
+            </div>
+        </div>
+    </div>
+    <hr />
+</footer>
+</body>
+
+</html>

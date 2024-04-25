@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <title>COVID Detector</title>
+  <link rel="shortcut icon" href="{{url_for('static',filename='image/coronavirus.png')}}">
+
+<body>
+  <h1 class="px-2" style="margin-left: 110px;">COVID-19<image style="margin-left: 3px;" src="{{url_for('static',filename='image/virus1.png')}}"
+      width="50" height="50"></image>
+  </h1>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+
+  <!-- Image and text -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+
+      <a class="navbar-brand" href="/detector" style="margin-left: 7%;">
+
+        Probability Detector
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div>
+        <ul class="navbar-nav me-auto mb-6 mb-lg-0">
+  
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('about')}}">About</a>
+          </li>
+        <a href="/">
+          <button style="margin-right: 125px;" class="btn btn-success">Home</button>
+        </a>
+        </ul>
+      </div>
+  </nav>
+  <div class="container">
+    <form action="/detector" method="POST">
+      <div class="form-group mt-4">
+        <label for="name"><b>Patient's Name:</b></label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Patient's full name">
+
+        <label for="age"><b>Patient's Age:</b></label>
+        <input type="text" class="form-control" id="age" name="age" placeholder="Patient's current age">
+
+        <label for="city"><b>City:</b></label>
+        <input type="text" class="form-control" id="city" name="city" placeholder="Patienty's city of residence">
+
+        <label for="fever"><b>Body Temperature:</b></label>
+        <input type="text" class="form-control" id="fever" name="fever" placeholder="In degree Celcius">
+
+      </div>
+
+      <div class="form-group">
+        <label for="pain"><b>Body Pain:</b></label>
+        <select class="form-select" id="pain" name="pain">
+          <option selected value="-1">Low pain</option>
+          <option value="0">Medium pain</option>
+          <option value="1">Severe pain</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="runnyNose"><b>Runny Nose:</b></label>
+        <select class="form-select" id="runnyNose" name="runnyNose">
+          <option selected value="0">No</option>
+          <option value="1">Yes</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="cough"><b>Cough:</b></label>
+        <select class="form-select" id="cough" name="cough">
+          <option selected value="0">No</option>
+          <option value="1">Yes</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="diffBreath"><b>Difficulty in breathing:</b></label>
+        <select class="form-select" id="diffBreath" name="diffBreath">
+          <option selected value="-1">No difficulty</option>
+          <option value="0">Little difficulty</option>
+          <option value="1">Severe difficulty</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="travelled"><b>Patient travelled in affected area:</b></label>
+        <select class="form-select" id="travelled" name="travelled">
+          <option selected value="0">No</option>
+          <option value="1">Yes</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-primary mt-4">Submit</button>
+    </form>
+  </div>
+  <footer>
+    <hr />
+    <div class="copyright mb-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <span>Copyright © 2021, All Rights Reserved</span>
+                </div>
+                <!-- End Col -->
+
+            </div>
+        </div>
+    </div>
+    <hr />
+</footer>
+</body>
+
+</html>
